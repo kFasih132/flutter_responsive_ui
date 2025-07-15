@@ -13,7 +13,7 @@ class RespSizesPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text(
-              'text widget which no requried system scaling (assesibillity) but scaling with screen size',
+              'text widget scaling with screen size',
               style: TextStyle(
                 color: Colors.amber,
                 fontSize: getRespSize(context, size: TextSizes.titleMedium),
