@@ -1,39 +1,73 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# 🌐 Flutter Responsive UI
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+A clean and flexible way to build responsive layouts in Flutter across mobile, tablet, and desktop — with minimal boilerplate and powerful layout tools.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+---
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## ✨ Features
 
-## Features
+🧱 Simple, composable layout widgets  
+📐 Screen-based constraints (`context.width`, `context.height`)  
+🔡 Auto-scaling text with `context.scaleText(...)`  
+🔀 Dynamic `Row`/`Column` layout with `ResponsiveSplitBody`  
+🧩 `ResponsiveCenteredBody` for centered readable content  
+⚙️ Customizable breakpoints  
+🧠 Inherited context with `ResponsiveLayoutProvider`  
+🧪 Built-in example app
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+---
 
-## Getting started
+## 📦 Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add to your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  flutter_responsive_ui: ^1.0.0
+```
+
+Import the package.
+```dart
+import 'package:flutter_responsive_ui/flutter_responsive_ui.dart';
+```
+
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Wrap your app with ```ResponsiveLayoutProvider```` to access screen size in the widget tree:
 
 ```dart
-const like = 'sample';
+void main() {
+  runApp(
+    const ResponsiveLayoutProvider(
+      child: MaterialApp(
+        home: MyHomePage(),
+      ),
+    ),
+  );
+}
 ```
 
-## Additional information
+## 🧱 Core Widgets
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+### ✅ ```ResponsiveCenteredBody```
+  Center your content and constrain its width (default maxWidth = 640).
+
+  ```dart
+  ResponsiveCenteredBody(
+  maxWidth: 720,
+  backgroundColor: Colors.grey[200],
+  child: Text("Centered content"),
+)
+```
+### 🔀 ResponsiveSplitBody
+  Automatically switches between vertical and horizontal layout:
+
+  ```dart
+  ResponsiveSplitBody(
+  primaryChild: Text("Primary"),
+  secondaryChild: Text("Secondary"),
+  gap: 16,
+)
+```
+

@@ -1,7 +1,7 @@
 name: flutter_responsive_ui
-description: "A new Flutter package project."
+description: flutter_responsive_ui helps you build adaptive, scalable Flutter UIs with centered layouts, responsive split views, screen size extensions, and auto text scaling.
 version: 0.0.1
-homepage:
+homepage: https://github.com/kFasih132/flutter_responsive_ui
 
 environment:
   sdk: ^3.8.1
