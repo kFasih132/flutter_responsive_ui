@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_responsive_ui/flutter_responsive_ui.dart';
+import 'package:responsive_ui_kit/responsive_ui_kit.dart';
 
 /// A widget that displays two children in either a [Row] or a [Column]
 /// depending on screen width or a forced layout direction.

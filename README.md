@@ -93,7 +93,7 @@ Custom breakpoints:
 final screenWidth = context.width;
 final screenHeight = context.height;
 ```
-## Global method for scalable text
+## Global method for scalable sizes
 
  
 

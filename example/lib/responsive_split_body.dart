@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_responsive_ui/flutter_responsive_ui.dart';
+import 'package:flutter_responsive_ui/responsive_ui_kit.dart';
 
 class ResponsiveSplitExample extends StatelessWidget {
   const ResponsiveSplitExample({super.key});

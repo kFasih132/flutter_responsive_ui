@@ -2,7 +2,7 @@ import 'package:example/centered_body.dart';
 import 'package:example/resp_size_page.dart';
 import 'package:example/responsive_split_body.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_responsive_ui/flutter_responsive_ui.dart';
+import 'package:flutter_responsive_ui/responsive_ui_kit.dart';
 
 void main() {
   runApp(const MyApp());
