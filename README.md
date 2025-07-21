@@ -23,12 +23,12 @@ Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  flutter_responsive_ui: ^1.0.0
+  responsive_ui_kit : ^0.0.2
 ```
 
 Import the package.
 ```dart
-import 'package:flutter_responsive_ui/flutter_responsive_ui.dart';
+import 'package:flutter_responsive_ui/responsive_ui_kit.dart';
 ```
 
 
