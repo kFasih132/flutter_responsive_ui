@@ -22,4 +22,9 @@
 
 ## 0.0.2
 
+## 0.0.3
+### 2025-07-21
+- udate the readme and added a vedio link and also a example code
+
+
  

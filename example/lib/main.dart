@@ -70,3 +70,130 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+
+class CenteredBodyPage extends StatelessWidget {
+  const CenteredBodyPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final screenWidth = context.width;
+
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(title: const Text('Responsive Centered Body')),
+      body: ResponsiveCenteredBody(
+        backgroundColor: Colors.grey[100],
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Screen Width: ${screenWidth.toStringAsFixed(0)} px',
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+              const SizedBox(height: 16),
+              Text(
+                'This content is centered and will never exceed 640px width, '
+                'no matter how wide the screen gets.',
+                style: Theme.of(context).textTheme.bodyLarge,
+              ),
+              const SizedBox(height: 32),
+              ElevatedButton(onPressed: () {}, child: const Text('Try Me')),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+
+class RespSizesPage extends StatelessWidget {
+  const RespSizesPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Text(
+              'text widget scaling with screen size',
+              style: TextStyle(
+                color: Colors.amber,
+                fontSize: getRespSize(context, size: TextSizes.titleMedium),
+              ),
+            ),
+            Icon(Icons.home, size: getRespSize(context, size: 22)),
+            ContainerText(
+              data: 'without scaling for reference ',
+              txtSize: TextSizes.titleMedium,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class ContainerText extends StatelessWidget {
+  const ContainerText({super.key, required this.data, required this.txtSize});
+  final String data;
+  final double txtSize;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        color: Colors.lightBlueAccent,
+      ),
+      child: Text(data, style: TextStyle(fontSize: txtSize)),
+    );
+  }
+}
+
+
+class ResponsiveSplitExample extends StatelessWidget {
+  const ResponsiveSplitExample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Responsive Split Body Example')),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ResponsiveSplitBody(
+          gap: 24,
+          primaryFlex: 2,
+          secondaryFlex: 1,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          // Optional: forceVerticalLayout: true, // or you can provide your own break logic
+          primaryChild: Container(
+            padding: const EdgeInsets.all(16),
+            color: Colors.blueAccent,
+            child: const Text(
+              'Primary Section\n\nThis takes more space on wider screens.',
+              style: TextStyle(color: Colors.white, fontSize: 16),
+            ),
+          ),
+          secondaryChild: Container(
+            padding: const EdgeInsets.all(16),
+            color: Colors.green,
+            child: const Text(
+              'Secondary Section\n\nThis stacks below or goes to the side.',
+              style: TextStyle(color: Colors.white, fontSize: 16),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
