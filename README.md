@@ -30,8 +30,11 @@ Import the package.
 ```dart
 import 'package:flutter_responsive_ui/responsive_ui_kit.dart';
 ```
+## Video
 
+https://github.com/user-attachments/assets/6e97004f-8694-4885-a852-5918e5615e8a
 
+ 
 ## Usage
 
 Wrap your app with ```ResponsiveLayoutProvider```` to access screen size in the widget tree:
@@ -117,7 +120,7 @@ final screenHeight = context.height;
         ),
 
 ```
-## 🛠️ Configuration
+## 🛠️ Configuration 
  
 | Feature           |      Usage                   |
 |-------------------|:------------------------------------------:|
